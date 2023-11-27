@@ -1,5 +1,6 @@
 "use strict";
-
+alert(`Hello to our Cheese App`)
+let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
 const cheeses = [
     {
         "name": "Cheddar",
