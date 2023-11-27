@@ -8,6 +8,9 @@ if (userInput === `name`) {
 } else {
     alert("wrong input, please try again.")
 }
+function searchCheese() {prompt
+    "Are you looking for a Hard, Semi-Hard, or Soft cheese? "
+}
 const cheeses = [
     {
         "name": "Cheddar",
@@ -235,6 +238,3 @@ const cheeses = [
         "country_of_origin": "Ireland"
     }
 ];
-
-alert("Welcome to Cheeseup!");
-
