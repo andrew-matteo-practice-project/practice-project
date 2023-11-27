@@ -233,7 +233,7 @@ function searchCheese() {
     if (userInput === `name`) {
         console.log(userInput)
         let nameCheese = prompt(`What is the Name of the Cheese?`)
-        if (nameCheese === cheeses.name) {
+        if (cheeses.name(nameCheese)) {
             alert(`You're cheese is ${cheeses.name}, it is from ${cheeses.country_of_origin}, and it is ${cheeses.type}`)
         }
     } else if (userInput === `country`) {
