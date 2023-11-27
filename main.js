@@ -1,16 +1,19 @@
 "use strict";
 alert(`Hello to our Cheese App`)
-let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
-if (userInput === `name`) {
-    console.log(userInput)
-} else if (userInput === `country`) {
-    console.log(userInput)
-} else {
-    alert("wrong input, please try again.")
+function searchCheese() {
+    prompt("Are you looking for a Hard, Semi-Hard, or Soft cheese? ")
+    let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
+    if (userInput === `name`) {
+        console.log(userInput)
+        prompt(`What is the Name of the Cheese?`)
+    } else if (userInput === `country`) {
+        console.log(userInput)
+        prompt(`What is the Country of the Cheese?`)
+    } else {
+        alert("wrong input, please try again.")
+    }
 }
-function searchCheese() {prompt
-    "Are you looking for a Hard, Semi-Hard, or Soft cheese? "
-}
+searchCheese()
 const cheeses = [
     {
         "name": "Cheddar",
