@@ -228,15 +228,26 @@ const cheeses = [
     }
 ];
 function filterCheeses() {
-    let userInput = prompt('Enter "name" to search by cheese name or "country" to search by country of origin:');
-    if (userInput !== 'name' && userInput !== 'country') {
+    let userInput = prompt('Would you like to search for either name, type or country of the cheese');
+    if (userInput !== 'name' && userInput !== 'country' && userInput !== 'type') {
         alert('Invalid input. Please enter either "name" or "country".');
         return;
     }
     if (userInput === `name`) {
         let nameCheese = prompt(`What is the name of the Cheese?`)
+        for (let i = 0; i < cheeses.length; i++) {
+            if (nameCheese === cheeses[i].name) {
+                alert(`You're cheese is ${}`)
+            }
+
+        }
     } else if (userInput === `country`) {
         let countryCheese = prompt(`What is the Cheese's country`)
+        for (let i = 0; i < cheeses.length; i++) {
+
+            i++
+            console.log(cheeses.hasOwnProperty(userInput));
+        }
     }
 }
 
