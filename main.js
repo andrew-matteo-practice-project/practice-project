@@ -228,21 +228,17 @@ const cheeses = [
     }
 ];
 function filterCheeses() {
-    const userInput = prompt('Enter "name" to search by cheese name or "country" to search by country of origin:');
+    let userInput = prompt('Enter "name" to search by cheese name or "country" to search by country of origin:');
 
     if (userInput !== 'name' && userInput !== 'country') {
         alert('Invalid input. Please enter either "name" or "country".');
         return;
     }
-    const cheeseType = prompt('Enter the cheese type (hard/soft/semi-hard/all) or press Enter to search all types:');
-    const searchQuery = prompt(`Enter the ${userInput === 'name' ? 'cheese name' : 'country'} to search for:`);
-
-    const formattedCheeses = filteredCheeses.map(cheese => `${cheese.name} from ${cheese.country} (${cheese.type})`).join('\n');
+    let cheeseType = prompt('Enter the cheese type (hard/soft/semi-hard/all) or press Enter to search all types:');
+    let searchQuery = prompt(`Enter the ${userInput === 'name' ? 'cheese name' : 'country'} to search for:`);
+    if (cheeses.hasOwnProperty(searchQuery = cheese.name))
+    let formattedCheeses = filteredCheeses.map(cheese => `${cheese.name} from ${cheese.country} (${cheese.type})`).join('\n');
     alert(formattedCheeses);
 }
+
 filterCheeses();
-function theCheese() {
-    if (cheeses.values(filterCheeses())) {
-        return
-    }
-}
