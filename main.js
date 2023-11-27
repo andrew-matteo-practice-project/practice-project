@@ -228,37 +228,21 @@ const cheeses = [
     }
 ];
 function filterCheeses() {
-    alert('Welcome to the Cheese Finder App!');
-
     const userInput = prompt('Enter "name" to search by cheese name or "country" to search by country of origin:');
 
     if (userInput !== 'name' && userInput !== 'country') {
         alert('Invalid input. Please enter either "name" or "country".');
         return;
     }
-
-    const searchQuery = prompt(`Enter the ${userInput === 'name' ? 'cheese name' : 'country'} to search for:`);
-
     const cheeseType = prompt('Enter the cheese type (hard/soft/semi-hard/all) or press Enter to search all types:');
-
-    const filteredCheeses = cheeses.filter(cheese => {
-        const matchesType = cheeseType === 'all' || cheese.type.toLowerCase() === cheeseType.toLowerCase();
-
-        if (userInput === 'name') {
-            return matchesType && cheese.name.toLowerCase().startsWith(searchQuery.toLowerCase());
-        } else if (userInput === 'country') {
-            return matchesType && cheese.country.toLowerCase().startsWith(searchQuery.toLowerCase());
-        }
-    });
-
-    if (filteredCheeses.length === 0) {
-        alert('No cheeses found based on the criteria.');
-        return;
-    }
+    const searchQuery = prompt(`Enter the ${userInput === 'name' ? 'cheese name' : 'country'} to search for:`);
 
     const formattedCheeses = filteredCheeses.map(cheese => `${cheese.name} from ${cheese.country} (${cheese.type})`).join('\n');
     alert(formattedCheeses);
 }
-
-// Run the application
 filterCheeses();
+function theCheese() {
+    if (cheeses.values(filterCheeses())) {
+        return
+    }
+}
