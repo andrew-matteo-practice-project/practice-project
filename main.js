@@ -5,13 +5,14 @@ function searchCheese() {
     let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
     if (userInput === `name`) {
         console.log(userInput)
-        prompt(`What is the Name of the Cheese?`)
+        let nameCheese = prompt(`What is the Name of the Cheese?`)
     } else if (userInput === `country`) {
         console.log(userInput)
-        prompt(`What is the Country of the Cheese?`)
+        let countryCheese = prompt(`What is the Country of the Cheese?`)
     } else {
         alert("wrong input, please try again.")
     }
+    if (cheeseName == cheeses.name)
 }
 searchCheese()
 const cheeses = [
