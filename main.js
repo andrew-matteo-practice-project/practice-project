@@ -229,16 +229,15 @@ const cheeses = [
 ];
 function filterCheeses() {
     let userInput = prompt('Enter "name" to search by cheese name or "country" to search by country of origin:');
-
     if (userInput !== 'name' && userInput !== 'country') {
         alert('Invalid input. Please enter either "name" or "country".');
         return;
     }
-    let cheeseType = prompt('Enter the cheese type (hard/soft/semi-hard/all) or press Enter to search all types:');
-    let searchQuery = prompt(`Enter the ${userInput === 'name' ? 'cheese name' : 'country'} to search for:`);
-    if (cheeses.hasOwnProperty(searchQuery = cheese.name))
-    let formattedCheeses = filteredCheeses.map(cheese => `${cheese.name} from ${cheese.country} (${cheese.type})`).join('\n');
-    alert(formattedCheeses);
+    if (userInput === `name`) {
+        let nameCheese = prompt(`What is the name of the Cheese?`)
+    } else if (userInput === `country`) {
+        let countryCheese = prompt(`What is the Cheese's country`)
+    }
 }
 
 filterCheeses();
