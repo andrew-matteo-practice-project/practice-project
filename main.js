@@ -1,20 +1,5 @@
 "use strict";
 alert(`Hello to our Cheese App`)
-function searchCheese() {
-    prompt("Are you looking for a Hard, Semi-Hard, or Soft cheese? ")
-    let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
-    if (userInput === `name`) {
-        console.log(userInput)
-        let nameCheese = prompt(`What is the Name of the Cheese?`)
-    } else if (userInput === `country`) {
-        console.log(userInput)
-        let countryCheese = prompt(`What is the Country of the Cheese?`)
-    } else {
-        alert("wrong input, please try again.")
-    }
-    if (cheeseName == cheeses.name)
-}
-searchCheese()
 const cheeses = [
     {
         "name": "Cheddar",
@@ -242,3 +227,21 @@ const cheeses = [
         "country_of_origin": "Ireland"
     }
 ];
+function searchCheese() {
+    prompt("Are you looking for a Hard, Semi-Hard, or Soft cheese? ")
+    let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
+    if (userInput === `name`) {
+        console.log(userInput)
+        let nameCheese = prompt(`What is the Name of the Cheese?`)
+        if (nameCheese === cheeses.name) {
+            alert(`You're cheese is ${cheeses.name}, it is from ${cheeses.country_of_origin}, and it is ${cheeses.type}`)
+        }
+    } else if (userInput === `country`) {
+        console.log(userInput)
+        let countryCheese = prompt(`What is the Country of the Cheese?`)
+    } else {
+        alert("wrong input, please try again.")
+    }
+
+}
+searchCheese()
