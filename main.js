@@ -1,7 +1,9 @@
 "use strict";
 alert(`Hello to our Cheese App`)
 let userInput = prompt(`Would you like to search by cheese name or the origin of cheese?`)
-if (userInput === name, country) {
+if (userInput === `name`) {
+    console.log(userInput)
+} else if (userInput === `country`) {
     console.log(userInput)
 } else {
     alert("wrong input, please try again.")
